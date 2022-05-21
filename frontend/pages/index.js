@@ -4,6 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 import Web3Modal from "web3modal";
 import styles from "../styles/Home.module.css";
 import { addLiquidity, calculateCD } from "../utils/addLiquidity";
+import * as LottiePlayer from "@lottiefiles/lottie-player";
 import {
   getCDTokensBalance,
   getEtherBalance,
@@ -515,6 +516,13 @@ export default function Home() {
         </div>
         <div>
           <img className={styles.image} src="./cryptodev.svg" />
+          <lottie-player
+            autoplay
+            loop
+            mode="normal"
+            src="https://assets3.lottiefiles.com/packages/lf20_jjmto1qp.json"
+            style={{ width: "320px" }}
+        ></lottie-player>
         </div>
       </div>
 
