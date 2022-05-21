@@ -4,7 +4,6 @@ import React, { useEffect, useRef, useState } from "react";
 import Web3Modal from "web3modal";
 import styles from "../styles/Home.module.css";
 import { addLiquidity, calculateCD } from "../utils/addLiquidity";
-import * as LottiePlayer from "@lottiefiles/lottie-player";
 import {
   getCDTokensBalance,
   getEtherBalance,
@@ -296,8 +295,8 @@ export default function Home() {
     // If user is not connected to the Rinkeby network, let them know and throw an error
     const { chainId } = await web3Provider.getNetwork();
     if (chainId !== 4) {
-      window.alert("Change the network to Rinkeby");
-      throw new Error("Change network to Rinkeby");
+        window.alert("Change the network to Rinkeby");
+        throw new Error("Change network to Rinkeby");      
     }
 
     if (needSigner) {
@@ -515,19 +514,12 @@ export default function Home() {
           {renderButton()}
         </div>
         <div>
-          <img className={styles.image} src="./cryptodev.svg" />
-          <lottie-player
-            autoplay
-            loop
-            mode="normal"
-            src="https://assets3.lottiefiles.com/packages/lf20_jjmto1qp.json"
-            style={{ width: "320px" }}
-        ></lottie-player>
+          <img className={styles.image} src="./crypto-santa.gif" />
         </div>
       </div>
 
       <footer className={styles.footer}>
-        Made with &#10084; by Crypto Devs
+        Made with &#10084; by Shiva
       </footer>
     </div>
   );
